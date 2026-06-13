@@ -1,49 +1,28 @@
 import React from 'react'
+import Navbar from './Components/navbar'
+import Hero from './assets/hero.svg'
+
 const App = () => {
   return (
-    <header className="bg-[#2d3441] text-white w-full px-20 py-6 flex items-center justify-between">
+    <div className='pl-30 pr-30 bg-[#282C33]'>
+      <Navbar></Navbar>
+      <div className="bg-[#7585a3] flex pr-25 pt-30 pl-18  justify-between h-250  w-full" >
+        <div className='font-serif'>
+          <p  className='text-5xl tracking-wide'>
+            Kapil is a <span className='text-purple-400'>web designer</span> and<br/> <span className='text-purple-400'>Front-end Developer</span>
+          </p>
+          <p className='pt-4 text-xl tracking-widest'>He crafts Responsive websites where technology <br /> meets creativity</p>
+          <button className='bg-[#2d3441] border- mt-4 text-white p-1  border-purple-400'>Contact me !!</button>
+        </div>
+        <div>
+          <img src={Hero} alt="hero image" className='h-[550px]' />
 
-      {/* Logo Section */}
-      <div className="flex items-center gap-x-3">
+        </div>
 
-        <img
-          src="logo.png"
-          alt="logo"
-          className="w-10 h-10 object-contain"
-        />
-
-        <h1 className="text-2xl font-semibold tracking-wide">
-          Portfolio
-        </h1>
-
+        {/* <img src={Hero} alt="hero image" /> */}
+        {/* <h1>asdofjasd</h1> */}
       </div>
-
-      {/* Navigation */}
-      <nav className="flex items-center gap-x-10 text-[16px]">
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
-          <span className="text-purple-500">#</span>
-          <button>Home</button>
-        </div>
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
-          <span className="text-purple-500">#</span>
-          <button>Works</button>
-        </div>
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
-          <span className="text-purple-500">#</span>
-          <button>About me</button>
-        </div>
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
-          <span className="text-purple-500">#</span>
-          <button>Contact</button>
-        </div>
-
-      </nav>
-
-    </header>
+    </div>
   )
 }
 
