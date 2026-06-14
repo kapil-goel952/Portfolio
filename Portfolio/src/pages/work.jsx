@@ -1,6 +1,6 @@
 import React from 'react'
 
-const work = () => {
+const Work = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const work = () => {
   )
 }
 
-export default work
+export default Work

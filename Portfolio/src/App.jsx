@@ -1,26 +1,26 @@
 import React from 'react'
+import Home from './pages/Home'
+import Work from './pages/Work'
+import About from './pages/About'
+import Contact from './pages/Contact'
 import Navbar from './Components/navbar'
-import HeroSection from './Components/home/heroSection'
 import Footer from './Components/footer'
+import { Route } from 'react-router-dom'
+import { Routes } from 'react-router-dom'
+
 
 
 const App = () => {
   return (
-    <div className='pl-30 pr-30 font-serif w-screen bg-[#282c33]'>
+    <div className='pl-30 pr-30 font-serif w-screen min-h-screen bg-[#282c33]'>
       <Navbar />
-      <HeroSection />
-      <div className="projects h-150 bg-amber-950 w-full  font-mono  px-20 mb-10">
-        <p className='text-white text-4xl font-black'><span className='text-purple-400 text-4xl'>#</span>Projects</p>
-      </div>
-      <div className="skills h-150 bg-amber-950 w-full     font-mono px-20 mb-10">
-        <p className='text-white text-4xl font-black'><span className='text-purple-400 text-4xl'>#</span>Skills</p>
-      </div>
-      <div className="about me h-150 bg-amber-950 w-full font-mono   px-20 mb-10">
-        <p className='text-white text-4xl font-black'><span className='text-purple-400 text-4xl'>#</span>About me</p>
-      </div>
-      <div className="contact h-150 bg-amber-950 w-full font-mono   px-20 mb-10">
-        <p className='text-white text-4xl font-black'><span className='text-purple-400 text-4xl'>#</span>Contact</p>
-      </div>
+      {/* <HeroSection /> */}
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/Work' element={<Work/>}/>
+        <Route path='/About' element={<About/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
+      </Routes>
       <Footer/>
     </div>
   )

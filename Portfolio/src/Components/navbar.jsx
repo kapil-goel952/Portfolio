@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const navbar = () => {
   return (
@@ -24,28 +25,26 @@ const navbar = () => {
 
         <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
           <span className="text-purple-500">#</span>
-          <button>Home</button>
+          <Link to='/'>Home</Link>
         </div>
 
         <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
           <span className="text-purple-500">#</span>
-          <button>Works</button>
+          <Link to='/Work'>Work</Link>
         </div>
 
         <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
           <span className="text-purple-500">#</span>
-          <button>About me</button>
+          <Link to='/About'>About me</Link>
         </div>
 
         <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
           <span className="text-purple-500">#</span>
-          <button>Contact</button>
+          <Link to='/Contact'>Contact</Link>
         </div>
 
       </nav>
-
     </header>
   )
 }
-
 export default navbar
