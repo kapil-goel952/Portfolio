@@ -2,7 +2,7 @@ import React from 'react'
 
 const navbar = () => {
   return (
-    <header className="bg-[#2c3036] sticky top-0 text-white w-full px-20 py-6 flex items-center justify-between">
+    <header className="bg-transparent/35 sticky top-0 text-white w-full px-20 py-6 flex items-center justify-between">
 
       {/* Logo Section */}
       <div className="flex items-center gap-x-3">
