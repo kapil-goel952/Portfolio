@@ -23,22 +23,22 @@ const navbar = () => {
       {/* Navigation */}
       <nav className="flex items-center gap-x-10 text-[16px]">
 
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
+        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
           <span className="text-purple-500">#</span>
           <Link to='/'>Home</Link>
         </div>
 
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
+        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
           <span className="text-purple-500">#</span>
           <Link to='/Work'>Work</Link>
         </div>
 
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
+        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
           <span className="text-purple-500">#</span>
           <Link to='/About'>About me</Link>
         </div>
 
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-400 transition">
+        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
           <span className="text-purple-500">#</span>
           <Link to='/Contact'>Contact</Link>
         </div>

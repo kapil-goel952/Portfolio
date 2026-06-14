@@ -12,16 +12,22 @@ import { Routes } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='pl-30 pr-30 font-serif w-screen min-h-screen bg-[#282c33]'>
-      <Navbar />
-      {/* <HeroSection /> */}
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Work' element={<Work/>}/>
-        <Route path='/About' element={<About/>}/>
-        <Route path='/Contact' element={<Contact/>}/>
-      </Routes>
-      <Footer/>
+    <div className='px-30 font-serif w-screen min-h-screen bg-black'>
+      <div className='bg-gray-950'>
+        <Navbar />
+
+        <div className='grow'>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/Work' element={<Work />} />
+            <Route path='/About' element={<About />} />
+            <Route path='/Contact' element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
+
+
     </div>
   )
 }
