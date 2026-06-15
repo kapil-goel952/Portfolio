@@ -1,50 +1,68 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const navbar = () => {
+const Navbar = () => {
   return (
-    <header className="bg-transparent/35 sticky top-0 text-white w-full px-20 py-6 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-[#282c33]/90 backdrop-blur-md text-white">
 
-      {/* Logo Section */}
-      <div className="flex items-center gap-x-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-20 py-6 flex flex-col md:flex-row justify-between gap-4">
 
-        <img
-          src="logo.png"
-          alt="logo"
-          className="w-10 h-10 object-contain"
-        />
+        {/* Logo */}
+        <div className="flex items-center gap-3">
 
-        <h1 className="text-2xl font-semibold tracking-wide">
-          Portfolio
-        </h1>
+          <img
+            src="logo.png"
+            alt="logo"
+            className="w-10 h-10 object-contain"
+          />
+
+          <h1 className="text-xl sm:text-2xl font-semibold tracking-wide">
+            Portfolio
+          </h1>
+
+        </div>
+
+        {/* Navigation */}
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base">
+
+          <Link
+            to="/"
+            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+          >
+            <span className="text-purple-500">#</span>
+            Home
+          </Link>
+
+          <Link
+            to="/Work"
+            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+          >
+            <span className="text-purple-500">#</span>
+            Work
+          </Link>
+
+          <Link
+            to="/About"
+            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+          >
+            <span className="text-purple-500">#</span>
+            About Me
+          </Link>
+
+          <Link
+            to="/Contact"
+            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+          >
+            <span className="text-purple-500">#</span>
+            Contact
+          </Link>
+
+        </nav>
 
       </div>
 
-      {/* Navigation */}
-      <nav className="flex items-center gap-x-10 text-[16px]">
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
-          <span className="text-purple-500">#</span>
-          <Link to='/'>Home</Link>
-        </div>
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
-          <span className="text-purple-500">#</span>
-          <Link to='/Work'>Work</Link>
-        </div>
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
-          <span className="text-purple-500">#</span>
-          <Link to='/About'>About me</Link>
-        </div>
-
-        <div className="flex items-center gap-x-1 cursor-pointer hover:text-purple-500 transition">
-          <span className="text-purple-500">#</span>
-          <Link to='/Contact'>Contact</Link>
-        </div>
-
-      </nav>
     </header>
   )
 }
-export default navbar
+
+export default Navbar

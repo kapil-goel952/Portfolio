@@ -1,20 +1,40 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
     return (
-        <div className="card h-75 flex shrink-0 flex-col w-120 border-2 rounded-xl justify-end px-4 py-3">
-            <p className='text-[18px] text-purple-600 my-3 font-black'>Web app</p>
-            <p className='text-2xl text-white font-black'>Cyber Dashboard</p>
-            <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad culpa sequi eos natus pariatur quidem </p>
-            <div className='my-3'>
-                <span className='text-blue-400 text-[18px]'>react</span>
-                <span className='text-blue-400 text-[18px]'> Tailwind</span>
-                <span className='text-blue-400 text-[18px]'> charts.js</span>
+        <div className="card flex flex-col border-2 rounded-xl justify-end p-4 w-full sm:w-100 lg:w-120 shrink-0 border-gray-500 min-h-70">
+
+            <p className="text-base sm:text-lg text-purple-600 my-2 font-black">
+                {project.category}
+            </p>
+
+            <p className="text-xl sm:text-2xl text-white font-black">
+                {project.title}
+            </p>
+
+            <p className="text-sm sm:text-base text-gray-500 mt-2">
+                {project.description}
+            </p>
+
+            <div className="my-3 flex flex-wrap gap-2">
+                {project.technologies.map((tech, index) => (
+                    <span
+                        key={index}
+                        className="text-blue-400"
+                    >
+                        {tech}
+                    </span>
+                ))}
             </div>
 
-            <Link to={''} className='text-purple-500  text-[18px] font-black hover:text-white transition-all duration-500'>View Project →</Link>
+            <Link
+                to={project.link}
+                className="text-purple-500 text-base sm:text-lg font-black hover:text-white transition-all duration-500"
+            >
+                View Project →
+            </Link>
+
         </div>
     )
 }
