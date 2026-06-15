@@ -21,7 +21,6 @@ const footer = () => {
                     <div className='mt-4'>
                         <p className='text-gray-500 text-xl'>Building Futrustic experiences <br /> through code & Creativity</p>
                     </div>
-                     <p className='text-gray-500 text-xl'>designed and made with ❤️ using react</p>
                 </div>
                 <div className=' ml-3 border-gray-500 border-l-4 border-b px-3 py-6 rounded-xl w-60'>
                     <p className='text-2xl text-purple-500 font-black'>NAVIGATION</p>
@@ -51,7 +50,8 @@ const footer = () => {
                     </div>
                     <p className='text-gray-500 text-xl ml-3'>Let's create something <br />extraordinary together</p>
                 </div>
-                <div className='border rounded-xl border-gray-500 px-2 py-4 h-37 my-5 border-l-4 border-b-2 ml-3'>
+                <div>
+                      <div className='border rounded-xl border-gray-500 px-2 py-4 h-37 my-5 border-l-4 border-b-2 ml-3'>
 
                     <p className='text-blue-400 text-xl ml-3'>&gt; stay curious</p>
                     <p className='text-blue-400 text-xl ml-3'>&gt; keep building</p>
@@ -59,6 +59,10 @@ const footer = () => {
                     <p className='text-blue-400 text-xl ml-3'>&gt; think Creative</p>
 
                 </div>
+                     <p className='text-gray-500 text-xl'>designed and made with ❤️ using react</p>
+
+                </div>
+              
             </div>
         </div>
 
