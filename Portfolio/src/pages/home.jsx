@@ -2,7 +2,7 @@ import React from 'react'
 import Herosection from '../Components/home/heroSection'
 
 import ProjectCard from '../Components/home/ProjectCard'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Projects from '../Components/home/Projects'
 import LetsBuild from '../Components/home/LetsBuild'
 
