@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const LetsBuild = () => {
   return (
-   <section className="w-full mt-16 px-4 sm:px-8 lg:px-20 mb-20">
+   <section className="w-full border-gray-600 border rounded  py-10 sm:px-8 lg:px-20">
 
         {/* Heading */}
         <p className="text-white text-3xl sm:text-4xl font-black mb-8">

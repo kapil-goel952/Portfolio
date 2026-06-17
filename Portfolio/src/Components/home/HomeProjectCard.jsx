@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="card flex flex-col border-2 rounded-xl justify-end p-4 w-full sm:w-100 lg:w-120 shrink-0 border-gray-500 min-h-70">
+        <div className="card  flex flex-col border-2 rounded-xl justify-end p-4 w-full sm:w-100 lg:w-120 shrink-0 border-gray-600 min-h-70">
 
             <p className="text-base sm:text-lg text-purple-600 my-2 font-black">
                 {project.category}

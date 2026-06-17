@@ -1,8 +1,8 @@
 import React from 'react'
-import ProjectCard from './ProjectCard'
+import ProjectCard from './WorkProjectCard'
 
-const Projects = () => {
-    const projects = [
+const WorkProject = () => {
+  const projects = [
         {
             id: 1,
             category: "Web App",
@@ -66,15 +66,24 @@ const Projects = () => {
 
 
     return (
-        <div id="card" className="flex gap-6 overflow-x-auto pb-4">
-            {projects.map((project) => (
-                <ProjectCard
-                    key={project.id}
-                    project={project}
-                />
-            ))}
-        </div>
+        
+            <section className="w-full py-10 px-4 rounded-xl border border-gray-500 sm:px-8 lg:px-20">
+
+                <p className="text-white text-3xl sm:text-4xl font-black mb-8">
+                    <span className="text-purple-500">#</span>Projects
+                </p>
+                <div id="card" className=" flex flex-wrap gap-8 pb-4">
+                    {projects.map((project) => (
+                        <ProjectCard
+                            key={project.id}
+                            project={project}
+                        />
+                    ))}
+                </div >
+            </section>
+   
+
     )
 }
-// ld;fkjsadlkfj
-export default Projects
+
+export default WorkProject

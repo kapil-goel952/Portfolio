@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 bg-[#282c33]/90 backdrop-blur-md text-white">
+    <header className="sticky border border-gray-600 rounded-xl top-0 z-50 bg-[#282c33]/90 backdrop-blur-md text-white">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-20 py-6 flex flex-col md:flex-row justify-between gap-4">
 

@@ -4,7 +4,7 @@ import Hero from '../../assets/hero.svg'
 
 const HeroSection = () => {
     return (
-        <div className="bg-[#2c3036] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 w-full font-sans overflow-hidden">
+        <div className="bg-gray-950 border-gray-600 border rounded flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 w-full font-sans overflow-hidden">
 
             {/* Left Section */}
             <div className="text-white max-w-2xl">
@@ -12,7 +12,7 @@ const HeroSection = () => {
                 <p className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight tracking-wide">
                     Kapil a <span className="text-purple-500">Creative Developer </span>
                     focused on building <span className="text-purple-500">Immersive </span>
-                    and <span className="text-purple-500">Meaningful Experiences</span>
+                    and <span className="text-blue-500">Meaningful Experiences</span>
 
                 </p>
                 <p className="pt-6 text-base sm:text-lg text-gray-400 leading-8 tracking-wide">

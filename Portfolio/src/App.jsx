@@ -13,7 +13,7 @@ import { Routes } from 'react-router-dom'
 const App = () => {
   return (
     <div className='px-30 font-serif w-screen min-h-screen bg-black'>
-      <div className='bg-gray-950'>
+      <div className='bg-gray-950 flex flex-col gap-2'>
         <Navbar />
 
         <div className='grow'>
