@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -32,40 +32,66 @@ const Navbar = () => {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-10">
 
-            <Link
+            <NavLink
               to="/"
-              className="text-sm font-medium text-green-700 border-b-2 border-green-700 pb-1"
+              className={({ isActive }) =>
+                `text-sm font-medium pb-1 transition ${isActive
+                  ? "text-green-700 border-b-2 border-green-700"
+                  : "text-gray-700 hover:text-green-700"
+                }`
+              }
             >
               Home
-            </Link>
+            </NavLink>
 
-            <Link
-              to="/services"
-              className="text-sm font-medium text-gray-700 hover:text-green-700 transition"
+            <NavLink
+              to="/service"
+              className={({ isActive }) =>
+                `text-sm font-medium pb-1 transition ${isActive
+                  ? "text-green-700 border-b-2 border-green-700"
+                  : "text-gray-700 hover:text-green-700"
+                }`
+              }
             >
-              Services
-            </Link>
+              Service
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/coverage"
-              className="text-sm font-medium text-gray-700 hover:text-green-700 transition"
+              className={({ isActive }) =>
+                `text-sm font-medium pb-1 transition ${isActive
+                  ? "text-green-700 border-b-2 border-green-700"
+                  : "text-gray-700 hover:text-green-700"
+                }`
+              }
             >
               Coverage Areas
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/about"
-              className="text-sm font-medium text-gray-700 hover:text-green-700 transition"
+              className={({ isActive }) =>
+                `text-sm font-medium pb-1 transition ${isActive
+                  ? "text-green-700 border-b-2 border-green-700"
+                  : "text-gray-700 hover:text-green-700"
+                }`
+              }
             >
               About Us
-            </Link>
+            </NavLink>
 
-            <Link
+            <NavLink
               to="/contact"
-              className="text-sm font-medium text-gray-700 hover:text-green-700 transition"
+              className={({ isActive }) =>
+                `text-sm font-medium pb-1 transition ${isActive
+                  ? "text-green-700 border-b-2 border-green-700"
+                  : "text-gray-700 hover:text-green-700"
+                }`
+              }
             >
               Contact
-            </Link>
+            </NavLink>
+
           </nav>
 
           {/* Right Section */}
@@ -82,7 +108,7 @@ const Navbar = () => {
 
             {/* CTA */}
             <Link
-              to="/book-service"
+              to="/service"
               className="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-xl text-sm font-medium transition"
             >
               Book Service
@@ -111,19 +137,20 @@ const Navbar = () => {
 
             <Link to="/">Home</Link>
 
-            <Link to="/Services">
-              Services
+            <Link to="/service">
+              Service
+  
             </Link>
 
-            <Link to="/Coverage">
+            <Link to="/coverage">
               Coverage Areas
             </Link>
 
-            <Link to="/About">
+            <Link to="about">
               About Us
             </Link>
 
-            <Link to="/Contact">
+            <Link to="/contact">
               Contact
             </Link>
 
@@ -132,7 +159,7 @@ const Navbar = () => {
             </div>
 
             <Link
-              to="/Service"
+              to="/service"
               className="bg-green-800 text-white text-center py-3 rounded-xl"
             >
               Book Service
@@ -141,9 +168,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-      <div className="bg-red-500 text-white p-10">
-  Tailwind Test
-</div>
+
     </header>
   );
 };

@@ -2,14 +2,14 @@ import React from 'react'
 import HeroSection from '../Components/HeroSection'
 
 
-const Contact = ({hero}) => {
+const Services = ({hero}) => {
 
   return (
-    <div>
-      <HeroSection hero={hero} />
-
+    <div>     
+       <HeroSection hero={hero}/>
+    
     </div>
   )
 }
 
-export default Contact
+export default Services
