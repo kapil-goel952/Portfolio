@@ -1,31 +1,47 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 function App() {
-  cosnt [response,setresponse]=useState([])
-  function getdata(){
-    const data = fetch('https://picsum.photos/v2/list')
-    console.log(data.data);
-    
+  const [data,setdata]=useState([])
+ async  function getdata(){
+    const response =await axios.get('https://picsum.photos/v2/list?page=2&limit=100')
+    console.log(response.data);
+    setdata(response.data)
   }
+
+  let userdata=<h1 className='text-white text-2xl'>no user avaliable</h1>
+   if (data.length>0) {
+    userdata=data.map((elem,idx)=>{
+            return(
+              <div key={idx} className=''>
+                <img src={elem.download_url} alt="img" className='h-50 w-50 border-2'/>
+              </div>
+            )
+        })
+   }
+
+   useEffect(
+()=>{
+  getdata()
+}
+   ,[])
   return (
-   <div className='h-100 w-100 bg-red-200'>
-      <div>
-        <h1>hello guyss</h1>
-      </div>
-      <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ex et, velit quos illum hic voluptas delectus natus, dolor rem sit libero laudantium repellendus dolores. Laboriosam beatae accusamus impedit veritatis!</p>
-        <button onClick={()=>{getdata()}}
-        className='bg-green-300'>
-          get data
-        </button>
-      </div>
+   <div className='h-full w-screen min-h-screen flex flex-col  bg-gray-900'>
+    {/* <div className='bg-gray-700 text-black'>
+    <button  onClick={getdata}>get data </button>
+
+    </div> */}
+    <div className='flex flex-wrap'>
+      {userdata}
+
+    </div>
    </div>
   )
 }
 
 export default App
 
+ 
 {/* <div>
   {data.map((elem,idx)=>{
     return (
