@@ -13,8 +13,8 @@ function App() {
    if (data.length>0) {
     userdata=data.map((elem,idx)=>{
             return(
-              <div key={idx} className=''>
-                <img src={elem.download_url} alt="img" className='h-50 w-50 border-2'/>
+              <div key={idx} className='h-50 w-50 border-2  rounded-2xl'>
+                <img src={elem.download_url} alt="img" className='h-full w-full' />
               </div>
             )
         })
@@ -27,13 +27,9 @@ function App() {
    ,[])
   return (
    <div className='h-full w-screen min-h-screen flex flex-col  bg-gray-900'>
-    {/* <div className='bg-gray-700 text-black'>
-    <button  onClick={getdata}>get data </button>
-
-    </div> */}
-    <div className='flex flex-wrap'>
+   
+    <div className='flex flex-wrap gap-4'>
       {userdata}
-
     </div>
    </div>
   )
