@@ -3,9 +3,10 @@ import axios from 'axios'
 
 function App() {
   const [index, setindex] = useState(1)
+  const [quantity, setquantity] = useState(10)
   const [data, setdata] = useState([])
   async function getdata() {
-    const response = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=100`)
+    const response = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=${quantity}`)
     console.log(response.data);
     setdata(response.data)
   }
@@ -32,13 +33,30 @@ function App() {
     () => {
       getdata()
     }
-    , [index])
+    , [index, quantity])
   return (
     <div className='h-full w-screen min-h-screen flex flex-col px-[2vw]  bg-gray-900'>
       <div className="header  fixed  top-0  left-[2vw]  right-[2vw]  flex  justify-between  items-center  h-[9vh]  px-6  bg-gray-800  rounded-b-2xl">
         <h1 className='font-black text-4xl text-white '>Gallary</h1>
         <form>
           <input type="text" placeholder='🔍 search your image' className='text-white w-[20vw] border-2 border-gray-500 px-5 rounded' />
+        </form>
+        <form className='text-gray-600 border-2 border-gray-500'>
+          <select 
+            id="quantity"
+            name="quantity"
+            value={quantity}
+            onChange={(e) => {
+              setquantity(parseInt(e.target.value))
+              setindex(1)
+            }}
+            className="bg-gray-800 text-white px-2 py-1 rounded"
+          >
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
         </form>
       </div>
       <div className='flex pt-[12vh] flex-wrap gap-4'>
