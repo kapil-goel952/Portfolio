@@ -11,26 +11,18 @@ const Home = () => {
     <div className='flex flex-col gap-2'>
 
       <Herosection />
-
-    
-        <Projects />
-
+      <Projects />
       {/* Skills Section */}
       <section className="w-full mt-16 px-4 sm:px-8 lg:px-20">
-
         <p className="text-white text-3xl sm:text-4xl font-black mb-8">
           <span className="text-purple-500">#</span>Skills
         </p>
-
         <div className="min-h-100">
           {/* Skills Content */}
         </div>
-
       </section>
-
       {/* About Section */}
       <section className="w-full mt-16 px-4 sm:px-8 lg:px-20">
-
         <p className="text-white text-3xl sm:text-4xl font-black mb-8">
           <span className="text-purple-500">#</span>About Me
         </p>
@@ -42,7 +34,7 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <LetsBuild/>
+      <LetsBuild />
     </div>
   )
 }

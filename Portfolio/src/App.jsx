@@ -7,6 +7,7 @@ import Navbar from './Components/navbar'
 import Footer from './Components/footer'
 import { Route } from 'react-router-dom'
 import { Routes } from 'react-router-dom'
+import NotFound from './Components/404Notfound'
 
 
 
@@ -22,6 +23,8 @@ const App = () => {
             <Route path='/Work' element={<Work />} />
             <Route path='/About' element={<About />} />
             <Route path='/Contact' element={<Contact />} />
+
+             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
         <Footer />
