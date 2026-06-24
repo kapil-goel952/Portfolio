@@ -10,7 +10,7 @@ const Work = () => {
     <div className='flex flex-col gap-2'>
         <Herosection/>
         <WorkProject/>
-        <HaveIdea/>
+       <HaveIdea/>
     </div>
    )
 
