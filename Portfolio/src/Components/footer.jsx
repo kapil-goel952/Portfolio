@@ -1,120 +1,101 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-    return (
-        <footer className="bg-gray-950 border-gray-600 border rounded-xl w-full  px-4 sm:px-8 lg:px-20 py-10">
+  return (
+    <footer className="bg-gray-950 border border-gray-700 rounded-xl w-full px-5 sm:px-10 lg:px-20 py-10">
 
-            <div className="flex flex-col lg:flex-row gap-8 justify-between">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
 
-                {/* Brand Section */}
-                <div className="max-w-md">
+        {/* Brand Section */}
+        <div className="lg:col-span-1">
 
-                    <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3">
+            <img
+              src="logo.png"
+              alt="logo"
+              className="w-8 h-8 object-contain"
+            />
 
-                        <img
-                            src="logo.png"
-                            alt="logo"
-                            className="w-10 h-10 object-contain"
-                        />
+            <h1 className="text-xl sm:text-2xl font-semibold text-white">
+              KAPIL
+            </h1>
+          </div>
 
-                        <h1 className="text-2xl sm:text-3xl font-semibold text-white">
-                            KAPIL
-                        </h1>
+          <p className="text-gray-500 text-sm sm:text-base mt-3 leading-relaxed">
+            Building futuristic experiences
+            <br />
+            through code & creativity
+          </p>
+        </div>
 
-                    </div>
+        {/* Navigation */}
+        <div className="border-l border-gray-700 pl-4">
 
-                    <p className="text-gray-500 text-base sm:text-lg mt-4">
-                        Building futuristic experiences
-                        <br />
-                        through code & creativity
-                    </p>
+          <p className="text-sm sm:text-base text-purple-500 font-semibold">
+            NAVIGATION
+          </p>
 
-                </div>
+          <div className="flex flex-col gap-2 text-gray-400 text-sm mt-3">
+            <Link to="/" className="hover:text-white transition">Home</Link>
+            <Link to="/Work" className="hover:text-white transition">Work</Link>
+            <Link to="/About" className="hover:text-white transition">About</Link>
+            <Link to="/Contact" className="hover:text-white transition">Contact</Link>
+          </div>
+        </div>
 
-                {/* Navigation */}
-                <div className="border-l-4 border-b border-gray-500 rounded-xl p-5 min-w-55">
+        {/* Contact */}
+        <div className="border-l border-gray-700 pl-4">
 
-                    <p className="text-xl sm:text-2xl text-purple-500 font-black">
-                        NAVIGATION
-                    </p>
+          <p className="text-sm sm:text-base text-purple-500 font-semibold">
+            CONTACT
+          </p>
 
-                    <div className="flex flex-col gap-2 text-gray-500 text-lg mt-4">
+          <div className="flex flex-col gap-2 text-gray-400 text-sm mt-3">
+            <a href="#" className="hover:text-white transition">GitHub</a>
+            <a href="#" className="hover:text-white transition">Email</a>
+            <a href="#" className="hover:text-white transition">LinkedIn</a>
+            <a href="#" className="hover:text-white transition">Instagram</a>
+          </div>
+        </div>
 
-                        <Link to="/" className='hover:text-gray-300 hover:font-black transition-all duration-200'>_Home</Link>
-                        <Link to="/Work" className='hover:text-gray-300 hover:font-black transition-all duration-200'>_Work</Link>
-                        <Link to="/About" className='hover:text-gray-300 hover:font-black transition-all duration-200'>_About</Link>
-                        <Link to="/Contact" className='hover:text-gray-300 hover:font-black transition-all duration-200'>_Contact</Link>
+        {/* Status */}
+        <div className="border-l border-gray-700 pl-4">
 
-                    </div>
+          <p className="text-sm sm:text-base text-purple-500 font-semibold">
+            STATUS
+          </p>
 
-                </div>
+          <div className="flex items-center mt-3">
+            <div className="h-2 w-2 bg-green-400 rounded-full"></div>
+            <p className="text-gray-400 text-sm ml-2">
+              Available for Work
+            </p>
+          </div>
 
-                {/* Contact */}
-                <div className="border-l-4 border-b border-gray-500 rounded-xl p-5 min-w-55">
+          <p className="text-gray-500 text-sm mt-3 leading-relaxed">
+            Let's create something extraordinary together
+          </p>
+        </div>
 
-                    <p className="text-xl sm:text-2xl text-purple-500 font-black">
-                        CONTACT
-                    </p>
+        {/* Terminal */}
+        <div className="border border-gray-700 rounded-xl p-4">
 
-                    <div className="flex flex-col gap-2 text-gray-500 text-lg mt-4">
+          <div className="space-y-1 text-blue-400 text-sm">
+            <p>&gt; stay curious</p>
+            <p>&gt; keep building</p>
+            <p>&gt; keep learning</p>
+            <p>&gt; think creative</p>
+          </div>
 
-                        <Link to="" className='hover:text-gray-300 hover:font-black transition-all duration-200'>Github</Link>
-                        <Link to="" className='hover:text-gray-300 hover:font-black transition-all duration-200'>Email</Link>
-                        <Link to="" className='hover:text-gray-300 hover:font-black transition-all duration-200'>LinkedIn</Link>
-                        <Link to="" className='hover:text-gray-300 hover:font-black transition-all duration-200'>Instagram</Link>
+          <p className="text-gray-500 text-xs mt-4">
+            designed with ❤️ using React
+          </p>
+        </div>
 
-                    </div>
+      </div>
+    </footer>
+  );
+};
 
-                </div>
-
-                {/* Status */}
-                <div className="border-l-4 border-b border-gray-500 rounded-xl p-5 min-w-55">
-
-                    <p className="text-xl sm:text-2xl text-purple-500 font-black">
-                        CURRENT STATUS
-                    </p>
-
-                    <div className="flex items-center mt-4">
-
-                        <div className="h-2 w-2 bg-green-300 rounded-full"></div>
-
-                        <p className="text-gray-500 text-lg ml-3">
-                            Available for Work
-                        </p>
-
-                    </div>
-
-                    <p className="text-gray-500 text-lg mt-4">
-                        Let's create something
-                        <br />
-                        extraordinary together
-                    </p>
-
-                </div>
-
-                {/* Terminal Card */}
-                <div className="flex flex-col justify-between">
-
-                    <div className="border border-gray-500 rounded-xl border-l-4 border-b-2 p-5">
-
-                        <p className="text-blue-400">&gt; stay curious</p>
-                        <p className="text-blue-400">&gt; keep building</p>
-                        <p className="text-blue-400">&gt; never stop learning</p>
-                        <p className="text-blue-400">&gt; think creative</p>
-
-                    </div>
-
-                    <p className="text-gray-500 text-sm sm:text-base mt-4">
-                        designed and made with ❤️ using React
-                    </p>
-
-                </div>
-
-            </div>
-
-        </footer>
-    )
-}
-
-export default Footer
+export default Footer;

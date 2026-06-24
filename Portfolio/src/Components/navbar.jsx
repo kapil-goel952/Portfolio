@@ -1,68 +1,85 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header className="sticky border border-gray-600 rounded-xl top-0 z-50 bg-[#282c33]/90 backdrop-blur-md text-white">
+    <header className="sticky top-0 z-50 bg-[#282c33]/90 backdrop-blur-md text-white border-b border-gray-800">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-20 py-6 flex flex-col md:flex-row justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-4 flex items-center justify-between">
 
         {/* Logo */}
         <div className="flex items-center gap-3">
-
           <img
             src="logo.png"
             alt="logo"
-            className="w-10 h-10 object-contain"
+            className="w-8 h-8 object-contain"
           />
 
-          <h1 className="text-xl sm:text-2xl font-semibold tracking-wide">
+          <h1 className="text-lg sm:text-xl font-semibold tracking-wide">
             Portfolio
           </h1>
-
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm sm:text-base">
+        <nav className="hidden sm:flex items-center gap-6 text-sm text-gray-400">
 
-          <Link
+          <NavLink
             to="/"
-            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-medium"
+                : "hover:text-white transition"
+            }
           >
-            <span className="text-purple-500">#</span>
+            <span className="text-purple-500 mr-1">#</span>
             Home
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/Work"
-            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-medium"
+                : "hover:text-white transition"
+            }
           >
-            <span className="text-purple-500">#</span>
+            <span className="text-purple-500 mr-1">#</span>
             Work
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/About"
-            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-medium "
+                : "hover:text-white transition"
+            }
           >
-            <span className="text-purple-500">#</span>
-            About Me
-          </Link>
+            <span className="text-purple-500 mr-1">#</span>
+            About
+          </NavLink>
 
-          <Link
+          <NavLink
             to="/Contact"
-            className="flex items-center gap-1 hover:text-purple-500 transition-colors"
+            className={({ isActive }) =>
+              isActive
+                ? "text-white font-medium"
+                : "hover:text-white transition"
+            }
           >
-            <span className="text-purple-500">#</span>
+            <span className="text-purple-500 mr-1">#</span>
             Contact
-          </Link>
-
+          </NavLink>
         </nav>
 
+        {/* Mobile hint (optional simple fallback) */}
+        <div className="sm:hidden text-xs text-gray-400">
+          Menu
+        </div>
+
       </div>
-
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
