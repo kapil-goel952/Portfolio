@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from '../assets/asdf.png'
+
 
 const Footer = () => {
   return (
@@ -12,7 +14,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-3">
             <img
-              src="logo.png"
+              src={logo}
               alt="logo"
               className="w-8 h-8 object-contain"
             />

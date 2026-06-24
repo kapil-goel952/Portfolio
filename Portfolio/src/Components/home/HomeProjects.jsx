@@ -66,13 +66,21 @@ const Projects = () => {
 
 
     return (
-        <div id="card" className="flex gap-6  overflow-x-auto pb-4">
-            {projects.map((project) => (
+        <div className="border-2 border-gray-800 rounded-2xl p-5">
+            <div>
+                 <p className="text-white text-2xl sm:text-3xl font-semibold mb-6">
+                <span className="text-purple-500">#</span> Projects
+            </p>
+            </div>
+           <div id="card"  className=' flex gap-6  overflow-x-auto pb-4'>
+             {projects.map((project) => (
                 <ProjectCard
                     key={project.id}
                     project={project}
                 />
             ))}
+           </div>
+           
         </div>
     )
 }

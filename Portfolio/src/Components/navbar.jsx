@@ -1,18 +1,19 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from '../assets/asdf.png'
 
 const Navbar = () => {
   return (
-    <header className="sticky top-0 z-50 bg-[#282c33]/90 backdrop-blur-md text-white border-b border-gray-800">
+    <header className="sticky top-0 z-50 bg-[#282c33]/90 backdrop-blur-md rounded-b-xl text-white border-b border-gray-800">
 
       <div className="max-w-7xl mx-auto px-5 sm:px-10 lg:px-20 py-4 flex items-center justify-between">
 
         {/* Logo */}
         <div className="flex items-center gap-3">
           <img
-            src="logo.png"
+            src={logo}
             alt="logo"
-            className="w-8 h-8 object-contain"
+            className="w-10 h-10 object-contain"
           />
 
           <h1 className="text-lg sm:text-xl font-semibold tracking-wide">
