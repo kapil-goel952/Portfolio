@@ -90,7 +90,7 @@ const ContactInfo = () => {
               </p>
 
               <p className="text-cyan-400 text-sm">
-                Earth 🌍
+                Yamuna Nagar, Haryana, India
               </p>
 
               <p className="text-gray-500 text-xs">
