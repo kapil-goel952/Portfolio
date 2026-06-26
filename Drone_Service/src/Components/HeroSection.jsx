@@ -7,7 +7,7 @@ console.log({hero});
   return (
     <section className="relative overflow-hidden min-h-[85vh] flex items-center">
       {/* Image */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[65%]">
+      <div className="absolute top-0 right-0 h-full w-[60%] xl:w-[65%]">
         <img  src={hero.background} alt="Drone Spraying" className=" h-full w-full object-cover object-center opacity-95 mask-[linear-gradient(to_left,black_70%,transparent)]"
         />
       </div>
