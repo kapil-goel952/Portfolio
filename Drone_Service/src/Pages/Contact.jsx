@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from '../Components/HeroSection'
+import HeroSection from '../Components/Common/HeroSection'
 import Form from '../Components/Contact/form'
 
 const Contact = ({hero}) => {

@@ -1,5 +1,6 @@
 import React from 'react'
-import HeroSection from '../Components/HeroSection'
+import HeroSection from '../Components/Common/HeroSection'
+
 
 
 const AboutUs = ({hero}) => {

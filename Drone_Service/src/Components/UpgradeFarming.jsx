@@ -2,6 +2,7 @@ import React from "react";
 
 const ReadyToUpgrade = () => {
   return (
+    
     <section className="w-full py-20">
 
       <div className="max-w-362.5 mx-auto px-6">
